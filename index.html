@@ -1,409 +1,613 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&display=swap" rel="stylesheet"> 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/src/style.css">
-    <title>byAlien</title>
-</head>
-<body>
-    <!-- Start Header -->
-    <header>
+* {
+    box-sizing: border-box;
+}
 
-        <!-- Start Navigation -->
-        <nav>
-            <div class="logo">
-                <img src="/src/assets/logo.png" alt="">
-            </div>
-            <div class="open-menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M481.9 270.1C490.9 279.1 496 291.3 496 304C496 316.7 490.9 328.9 481.9 337.9C472.9 346.9 460.7 352 448 352H64C51.27 352 39.06 346.9 30.06 337.9C21.06 328.9 16 316.7 16 304C16 291.3 21.06 279.1 30.06 270.1C39.06 261.1 51.27 256 64 256H448C460.7 256 472.9 261.1 481.9 270.1zM475.3 388.7C478.3 391.7 480 395.8 480 400V416C480 432.1 473.3 449.3 461.3 461.3C449.3 473.3 432.1 480 416 480H96C79.03 480 62.75 473.3 50.75 461.3C38.74 449.3 32 432.1 32 416V400C32 395.8 33.69 391.7 36.69 388.7C39.69 385.7 43.76 384 48 384H464C468.2 384 472.3 385.7 475.3 388.7zM50.39 220.8C45.93 218.6 42.03 215.5 38.97 211.6C35.91 207.7 33.79 203.2 32.75 198.4C31.71 193.5 31.8 188.5 32.99 183.7C54.98 97.02 146.5 32 256 32C365.5 32 457 97.02 479 183.7C480.2 188.5 480.3 193.5 479.2 198.4C478.2 203.2 476.1 207.7 473 211.6C469.1 215.5 466.1 218.6 461.6 220.8C457.2 222.9 452.3 224 447.3 224H64.67C59.73 224 54.84 222.9 50.39 220.8zM372.7 116.7C369.7 119.7 368 123.8 368 128C368 131.2 368.9 134.3 370.7 136.9C372.5 139.5 374.1 141.6 377.9 142.8C380.8 143.1 384 144.3 387.1 143.7C390.2 143.1 393.1 141.6 395.3 139.3C397.6 137.1 399.1 134.2 399.7 131.1C400.3 128 399.1 124.8 398.8 121.9C397.6 118.1 395.5 116.5 392.9 114.7C390.3 112.9 387.2 111.1 384 111.1C379.8 111.1 375.7 113.7 372.7 116.7V116.7zM244.7 84.69C241.7 87.69 240 91.76 240 96C240 99.16 240.9 102.3 242.7 104.9C244.5 107.5 246.1 109.6 249.9 110.8C252.8 111.1 256 112.3 259.1 111.7C262.2 111.1 265.1 109.6 267.3 107.3C269.6 105.1 271.1 102.2 271.7 99.12C272.3 96.02 271.1 92.8 270.8 89.88C269.6 86.95 267.5 84.45 264.9 82.7C262.3 80.94 259.2 79.1 256 79.1C251.8 79.1 247.7 81.69 244.7 84.69V84.69zM116.7 116.7C113.7 119.7 112 123.8 112 128C112 131.2 112.9 134.3 114.7 136.9C116.5 139.5 118.1 141.6 121.9 142.8C124.8 143.1 128 144.3 131.1 143.7C134.2 143.1 137.1 141.6 139.3 139.3C141.6 137.1 143.1 134.2 143.7 131.1C144.3 128 143.1 124.8 142.8 121.9C141.6 118.1 139.5 116.5 136.9 114.7C134.3 112.9 131.2 111.1 128 111.1C123.8 111.1 119.7 113.7 116.7 116.7L116.7 116.7z"/></svg></div>
-            <div class="menu">
-                <ul>
-                    <li><a href="#">Inspiration</a></li>
-                    <li><a href="#">Artwork</a></li>
-                    <li><a href="#">Digital Art</a></li>
-                    <li><a href="#">History</a></li>
-                    <li><a href="#">Urban</a></li>
-                    <li><a href="#">Culture</a></li>
-                    <li><a href="#">Artist</a></li>
-                    <div class="close-menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg></div>
-                </ul>
-            </div>
-        </nav>
-        <!-- End navigation -->
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: "IBM Plex Sans", sans-serif;
+    color: #323537;
+    background-color: #F2F4F6;
+}
 
-        <!-- Start Partner -->
-        <div class="partners">
-            <p>support by dicoding.com</p>
-        </div>
-        <!-- End Partner -->
 
-    </header>
-    <!-- End Header -->
+h1, h2, h3, h4, h5, h6 {
+    line-height: 2rem;
+    font-weight: 700;
+}
 
-    <!-- Start Top Ads Banner -->
-    <div class="top-banner">
-        <img src="/src/assets/banner-top.png" alt="">
-    </div>
-    <!-- End Top Ads Banner -->
+h1 {
+    font-size: 45px;
+    margin-bottom: 30px;
+}
 
-    <!-- Start Main -->
-    <main>
+h2 {
+    font-size: 1.9rem;
+    margin: 0;
+    margin-bottom: 30px;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 4px;
+    text-decoration-color: #FF7A8A;
+    line-height: 50px;
+}
 
-        <!-- Start Upper Section -->
-        <div class="container">
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    margin-top: 5px;
 
-            <!-- Start Headline Article -->
-            <div class="left-container">
-                <h2>HEADLINE</h2>
-                <img src="/src/assets/headline.jpg" alt="">
-                <div class="category">
-                    <ul>
-                        <li><a href="">History</a></li>
-                        <li>/</li>
-                        <li><a href="">Culture</a></li>
-                    </ul>
-                </div>
-                <article>
-                    <h3>In The Realm Of Spirits: Traditional Dayak Tatto In Borneo</h3>
-                    <p>Among the Dayak, all life – whether animal, vegetable, or human – is endowed with a spiritual aspect. Spirits living in the jungle must always be propitiated and never offended</p>
-                    <p>Recently, Vince Hemingson, who was traveling with the Iban, said that even when an individual wishes to urinate, he or she must ask the spirits for permission in order to give them an opportunity to move: “No one would ever want to pee on a invisible spirit that is sitting directly in front of them and certainly no one would ever piss on a tree, you never know whose house that tree might be [and] I certainly didn’t want to pee on anyone’s house.” Spirits (Iban: antu), both good and bad, exercise many powers; they provide the techniques of rice cultivation, the techniques of textile weaving, and the techniques of tattooing.</p> 
-                    <p>Spirits usually come to individuals through dreams and even tattoo artists are under the protection of a particular spirit. Dreams are believed to be revelations sent by the gods, sometimes by deified ancestors, and all Dayak are guided by them in their daily affairs.</p>
-                    <p>Dayak heaven is a universe filled with the spiritual energies that charge with life-power most existing beings and things. This divine realm, removed from secular time and the laws of this world, is the abode of gods and ancestors who grant privileges to those who maintain the proper balance of life throughout all of its stages. At birth, all Dayak are endowed with the perfect gifts of nature: mind, body, and several souls.</p>
-                    <p>Each of these components are essential for remaining “complete” throughout life experience, since completion is necessary for one to enter the sanctity of the afterlife. According to the beliefs of the Iban, one soul resides in the head and by taking someone else’s you capture it as well as their status, strength, skill and power.</p>
-                    <p>Thus, it is not surprising that human heads, once taken and preserved, were respected in ritual; their spirits became adopted members of the group that took them and were persuaded to aid their captors in many ways.
-                        Most Dayak, living their lives in strict accordance to the divine norms and commandments by which the gods and ancestors had lived their lives, relied upon human sacrifice to propitiate the good will of their masters.</p>
-                    <p>Headhunting, the ritual component, served to maintain the prosperity of the group by ensuring agricultural and community fertility. In the eyes of the gods and ancestors, the taking of fresh heads was not only pleasing – it was duly rewarded with many gifts.</p>
-                    <p>For example, the divine indicated locations in the forest where fields should be cleared and planted; they protected the rice fields against crop failure; they lent their diagnosis in illness; and they accompanied men in war or on the headhunt to insure success. Headhunting was therefore an institution believed to maintain balance and harmony in the Dayak cosmos and oftentimes a man’s status was not established until he had proven success in headhunting itself.
-                    </p>
-                </article>
-            </div>
-           <!-- End Headline Article -->
+}
 
-           <!-- Start Aside -->
-            <aside>
-                <h2>Meet The Author</h2>
+p {
+    font-size: 1rem;
+    line-height: 1.6rem;
+    font-weight: 400;
+}
 
-                <!-- Start Profile -->
-                <div class="profile-container">
-                    <img src="/src/assets/artists/profile-picture.jpg" alt="">
-                    <h3>Hi! I'm Frans</h3>
-                    <p>I'm excited about front-end development, UI/UX design.</p>
-                    <p>This is byAliens.com, we talk about people who really great in doin something especially in Art. We also talk about art history, art culture, and many more!</p>  
-                </div>
-                <!-- End Profile -->
 
-                <!-- Start Mini Article -->
-                <div class="right-container">
-                    <h2>World's Culture</h2>
-                    
-                    <!-- Mini Article 1 -->
-                    <div class="right-wrapper">
-                        <img src="/src/assets/mini1.jpg" alt="">
-                        <div class="right-text">
-                            <div class="category">
-                                <ul>
-                                    <li><a href="">Japan</a></li>
-                                </ul>  
-                            </div>
-                            <h3><a href="">Geisha: The Female Artisan</a></h3>
-                        </div>
-                    </div>
+a {
+    text-decoration: none;
+    color: #52437B;
+}
 
-                    <!-- Mini Article 2 -->
-                    <div class="right-wrapper">
-                        <img src="/src/assets/mini2.webp" alt="">
-                        <div class="right-text">
-                            <div class="category">
-                                <ul>
-                                    <li><a href="">Indonesia</a></li>                                            
-                                </ul>
-                            </div>
-                            <h3><a href="">The Culture of the Tana Toraja</a></h3>
-                        </div>
-                    </div>
-                         
-                    <!-- Mini Article 3 -->
-                    <div class="right-wrapper">
-                        <img src="/src/assets/mini3.webp" alt="">
-                        <div class="right-text">
-                            <div class="category">
-                                <ul>
-                                    <li><a href="">Mexico</a></li>
-                                </ul>
-                            </div>
-                            <h3><a href="">Mexican Day of The Death</a></h3>
-                        </div>
-                    </div>
-                    
-                    <!-- Mini Article 4 -->
-                    <div class="right-wrapper">
-                        <img src="/src/assets/mini4.jpg" alt="">
-                        <div class="right-text">
-                            <div class="category">
-                                <ul>
-                                    <li><a href="">Scotland</a></li> 
-                                </ul>
-                            </div>
-                            <h3><a href="">Scotland's Highland Games</a></h3>
-                        </div>
-                    </div>
-                
-                    <!-- Mini Article 5 -->
-                    <div class="right-wrapper">
-                        <img src="/src/assets/mini5.jpg" alt="">
-                        <div class="right-text">
-                            <div class="category">
-                                <ul>
-                                    <li><a href="">Indonesia</a></li>
-                                </ul>
-                            </div>
-                            <h3><a href="">The Lives of Indonesian Batik</a></h3>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Mini Article -->
+a:hover {
+    text-decoration: underline;
+}
 
-            </aside>
-            <!-- End Aside -->
+/* HEADER */
 
-        </div>
-        <!-- End Upper Section -->
+header {
+    width: 100%;
+    background-color: #293462;
+    top: 0;
+    z-index: 100;
+    position: fixed;
+}
 
-        <!-- Start Editor's Choice Section -->
-        <div class="choice-container">
-            <h2>Editorial's Pick</h2>
-            <div class="choice-list">
+nav {
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-                <!-- Start Choice Article 1 -->
-                <div class="choice">
-                    <img src="/src/assets/choice1.jpg" alt="">
-                    <div class="category">
-                        <ul>
-                            <li><a href="">Inspiration</a></li>
-                            <li>/</li>
-                            <li><a href="">Artwork</a></li>
-                        </ul>
-                    </div>    
-                    <h3><a href="">25 Contemporary Artworks you need to see</a></h3>
-                    <p>Contemporary art is a period that is generally considered to span from the post-war period to present day. It encompasses numerous different styles, genres and artistic approaches, and so is difficult to fully comprehend. That’s where Artsper comes in! Today we’re breaking down 25 key contemporary artworks that you need to know to fully understand this artistic period!</p>
-                </div>
+.logo img {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    cursor: pointer;
+}
 
-                <!-- Start Choice Article 2 -->
-                <div class="choice">
-                    <img src="/src/assets/choice2.jpg" alt="">
-                    <div class="category">
-                        <ul>
-                            <li><a href="">Urban</a></li>
-                            <li>/</li>
-                            <li><a href="">Art & Culture</a></li>
-                        </ul>
-                    </div>    
-                    <h3><a href="">5 Art Podcasts You Should Listen To</a></h3>
-                    <p>Art podcasts are the perfect escape from the world around you. They are educational, insightful, and accessible. On top of this, there is a diverse range of art podcasts at your disposal. Whether you are an art professional, an art enthusiast, or are simply dipping your toes in the world of art for the first time, there is a podcast for you… Together with Artsper, let’s explore 5 art podcasts you should listen to!</p>
-                </div>
+.logo img:hover {
+    transform: rotate(-5deg);
+}
 
-                <!-- Start Choice Article 3 -->
-                <div class="choice">  
-                    <img src="/src/assets/choice3.jpeg" alt="">
-                    <div class="category">
-                        <ul>
-                            <li><a href="">Digital Art</a></li>
-                            <li>/</li>
-                            <li><a href="">Urban</a></li>
-                        </ul>
-                    </div>    
-                    <h3><a href="">NFT Art: A Game Changer or Passing Fad?</a></h3>
-                    <p>NFT art appeared very recently. In a few months, NFTs have gone from a niche market to a colossal and globalized industry, representing tens of billions of dollars in transactions. Between adoration and contempt, fantasy and artistic revolution, what is the future of NFTs in the art market?</p>
-                </div>
-                
-                <!-- Start Choice Article 4 -->
-                <div class="choice">  
-                    <img src="/src/assets/choice4.jpg" alt="">
-                    <div class="category">
-                        <ul>
-                            <li><a href="">Culture</a></li>
-                            <li>/</li>
-                            <li><a href="">History</a></li>
-                        </ul>
-                    </div>    
-                    <h3><a href="">Take A Closer Look At The Chinese New Year Celebrations In London</a></h3>
-                    <p>2015 will be the Year of the Sheep, a creature renowned in Chinese legend for its gentleness, kindness and warmth. The festivities begin at 10am on Sunday 22 February, with a New Year’s Parade spiraling ng through London’s West End, before reaching its final destination in Chinatown.</p>
-                </div>
+.open-menu, .close-menu {
+    display: none;
+}
 
-                <!-- Start Choice Article 5 -->
-                <div class="choice">  
-                    <img src="/src/assets/choice5.jpg" alt="">
-                    <div class="category">
-                        <ul>
-                            <li><a href="">Artwork</a></li>
-                            <li>/</li>
-                            <li><a href="">Digital Art</a></li>
-                        </ul>
-                    </div>    
-                    <h3><a href="">How Famous Artists Adapt to Digital Art</a></h3>
-                    <p>Digital art covers a wide variety of technologies: 3D modeling, telecommunications, virtual reality, artificial intelligence, NFTs, augmented reality… All these new technologies are new tools for artists! While some have specialized in digital art from the start, famous artists are becoming more and more interested in it. Let’s discover an overview of five famous artists who are adapting to digital art.</p>
-                </div>
+.menu ul {
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
 
-                <!-- Start Choice Article 6 -->
-                <div class="choice">  
-                    <img src="/src/assets/choice6.jpg" alt="">
-                    <div class="category">
-                        <ul>
-                            <li><a href="">Urban</a></li>
-                            <li>/</li>
-                            <li><a href="">Inspiration</a></li>
-                        </ul>
-                    </div>    
-                    <h3><a href="">Art Paris 2022: Our Key Insights</a></h3>
-                    <p>Back in its usual springtime slot, the Art Paris fair opened from April 7 to 10, 2022. During these four days, 130 high-flying galleries and thousands of contemporary art lovers and collectors met at the Grand Palais Éphémère. After a record edition during the pandemic (a risky but successful bet), Art Paris 2022 kept its promises again this year.</p>
-                </div>
-                
-            </div>       
-        </div>
-        <!-- End Editor's Choice Section -->
+.menu ul li {
+    margin: auto;
+    display: inline-block;
+    float: right;
+    padding: 5px 15px;
+}
 
-        <!-- Start Artist Section -->
-        <div class="artist-container">
-            <div id="artist-content">
-                <h2>Artists of The Month</h2>
+.menu ul li a {
+    text-decoration: none;
+    color: #FAEDF0;
+    font-weight: bold;
+}
 
-                <!-- Start Artist List -->
-                <div class="artist-list">
+.menu ul li a:hover {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 4px;
+    text-decoration-color: #F76262;
+}
 
-                    <!-- Start Artist 1 -->
-                    <div class="artist">
-                        <img src="/src/assets/artists/jean-jullien.jpg" class="artist-thumb" alt="">
-                        <div class="artist-desc">
-                            <h3><a href="">Jean Jullien</a></h3>
-                            <p>Jean Jullien is a French graphic artist living and working in Paris. Originally from Nantes, Jean completed a graphic design degree in Quimper before moving to London. </p>
-                        </div>    
-                    </div>
-                    
-                    <!-- Start Artist 2 -->
-                    <div class="artist">
-                        <img src="/src/assets/artists/bodil-jane.jpg" class="artist-thumb" alt="">
-                        <div class="artist-desc">
-                            <h3>Bodil Jane</h3>
-                            <p>Amsterdam illustrator Bodil Jane has become renowned for her colourful portraits of "real" women, the kind of approachable, friendly characters we can all relate to.</p>
-                        </div>    
-                    </div>
+.partners {
+    width: 100%;
+    text-align:center;
+    background-color: #F76262;
+}
 
-                    <!-- Start Artist 3 -->
-                    <div class="artist">
-                        <img src="/src/assets/artists/sebastian-curi.jpeg" class="artist-thumb" alt="">
-                        <div class="artist-desc">
-                            <h3><a href="">Sebastian Curi</a></h3>
-                            <p>Argentinian illustrator Sebastian Curi has been in the game for some time. Based in Vancouver, Canada</p>
-                        </div>   
-                    </div>
+.partners p {
+    color: #293462;
+    margin: 0;
+    line-height: 2.5rem;
+}
 
-                    <!-- Start Artist 4 -->
-                    <div class="artist">
-                        <img src="/src/assets/artists/andyj-pizza.jpg" class="artist-thumb" alt="">
-                        <div class="artist-desc">
-                            <h3><a href="">Andy J. Pizza</a></h3>
-                            <p>Andy J. Pizza has a fun style and takes a lot of inspiration from his one of his favorite childhood creators, Jim Henson.</p>
-                        </div>    
-                    </div> 
+.partners a {
+    color: #293462;
+}
 
-                    <!-- Start Artist 5 -->
-                    <div class="artist">
-                        <img src="/src/assets/artists/bruno-mangyoku.jpg" class="artist-thumb" alt="">
-                        <div class="artist-desc">
-                            <h3><a href="">Bruno Mangyoku</a></h3>
-                            <p>Bruno Mangyoku is French illustrator represented by British agency, Handsome Frank and boasts clients like Forbes and The </p>
-                        </div>   
-                    </div>
+.partners a:hover {
+    color: #F2F4F6;
+}
 
-                    <!-- Start Artist 6 -->
-                    <div class="artist">
-                        <img src="/src/assets/artists/bruno-mangyoku.jpg" class="artist-thumb" alt="">
-                        <div class="artist-desc">
-                            <h3><a href="">Bijou Karman</a></h3>
-                            <p>Bijou Karman shares some similarities with the aforementioned Bodil Jane, heavily featuring women, plants, and colorful patterns.</p>
-                        </div>
-                    </div>
 
-                    <!-- Start Artist 7 -->
-                    <div class="artist">
-                        <img src="/src/assets/artists/bruno-mangyoku.jpg" class="artist-thumb" alt="">
-                        <div class="artist-desc">
-                            <h3><a href="">Alva Skog</a></h3>
-                            <p>Represented by the venerable illustration agency, Jelly London, Alva Skog hits all the milestones of an illustrators illustrator.</p>
-                        </div>  
-                    </div>
+/* BANNER ADS */
 
-                </div>
-                <!-- End Artist List -->
+.top-banner {
+    /* display: flex; */
+    width: 1400px;
+    margin: auto;
+    margin-top: 150px;
+}
 
-            </div>
-        </div>
-        <!-- Start Artist Section -->
+.top-banner img {
+    width: 100%;
+    margin: auto;
+}
 
-    </main>
-    <!-- Main End -->
 
-    <!-- Footer Start -->
-    <footer>
-        <div class="footer-container">
+/* Main */
 
-            <!-- Start Write Menu -->
-            <div class="footer-content">
-                <h3>Write</h3>
-                <ul>
-                    <li><a href="">Distribution</a></li>
-                    <li><a href="">Editor Tips</a></li>
-                    <li><a href="">Guidelines</a></li>
-                    <li><a href="">Why Write</a></li>
-                </ul>
-            </div>
+main {
+    width: 100%;
+    margin: auto;
+}
 
-            <!-- Start About Menu -->
-            <div class="footer-content">
-                <h3>About</h3>
-                <ul>
-                    <li><a href="">Our Story</a></li>
-                    <li><a href="">Team</a></li>
-                    <li><a href="">Careers</a></li>
-                </ul>
-            </div>
+.container {
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+}
 
-            <!-- Start Legal Menu -->
-            <div class="footer-content">
-                <h3>Legal</h3>
-                <ul>
-                    <li><a href="">Terms & Condition</a></li>
-                    <li><a href="">Privacy Policy</a></li>
-                    <li><a href="">Terms of use</a></li>
-                </ul>
-            </div>
+.left-container {
+    width: 70%;
+    padding-right: 40px;
+}
 
-            <!-- Start NewsLetter Menu -->
-            <div class="footer-content">
-                <h3>byAliens Newsletter</h3>
-                <form action="">
-                    <input type="text" placeholder="type your email">
-                    <br>
-                    <button><a href="">Subscribe For Free</a></button>
-                </form>
-            </div>
+.left-container img {
+    width: 100%;
+    object-fit: cover;
+}
 
-        </div>
+.category {
+    width: 100%;
+    margin-top: 10px
+}
 
-        <!-- Start Copyright -->
-        <div class="copyright">
-            <p>Ⓒ2022 byAliens - All Rights Reserved.</p>
-        </div>
-        <!-- End Copyright -->
+.category ul {
+    margin: 0;
+    padding: 0; 
+}
 
-    </footer>
-    <!-- End Footer -->
+.category ul li{
+    margin: auto;
+    display: inline-block;
+}
 
-    <script src="/src/script.js"></script>
+.category ul li a {
+    color: #323537;
+}
 
-</body>
-</html>
+.article-content {
+    text-align: justify;
+}
+
+aside {
+    width: 30%;
+}
+
+.profile-container {
+    text-align: center;
+}
+
+.profile-container img {
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-container h3 { 
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-media ul {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.social-media ul li {
+    display: inline-block;
+    
+}
+
+.social-media svg:hover {
+    fill: #FF7A8A;
+}
+
+.right-container {
+    margin-top: 50px;   
+}
+
+.right-wrapper {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.right-wrapper img {
+    width: 180px;
+    height: 150px;
+    margin-right: 10px;
+    display: block;
+}
+
+
+/* EDITOR CHOICE  */
+
+.choice-container {
+    max-width: 1400px;
+    margin: auto;
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
+
+.choice-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 30px;
+}
+
+.choice {
+    flex: 25%;
+    margin-bottom: 30px;
+}
+
+.choice p {
+    max-height: 100px;
+    overflow: hidden;
+}
+
+.choice img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* ARTIST */
+
+.artist-container {
+    display: flex;
+    max-width: 1400px;
+    margin: auto;
+    overflow: hidden;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+#artist-content {
+    width: 100%;
+    margin: auto;
+}
+
+.artist-list {
+    display: flex;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    align-items:center;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    column-gap: 20px;
+}
+
+.artist {
+    flex: 0 0 auto;
+    width: 250px;
+}
+
+.artist-thumb {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.artist-desc {
+    width: 100%;
+    height: 180px;
+    line-height: 1.5rem;
+    overflow: hidden;
+}
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    margin: auto;
+    background-color: #52437B;
+    color: #F7ECDE;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footer-content {
+    flex: 25%;
+}
+
+.footer-content h3 {
+    margin-top: 30px;
+}
+
+.footer-content form {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.footer-content input {
+    margin-bottom: 10px;
+    height: 30px;
+    font-size: 1rem;
+    border:none;
+    width:100%;    
+}
+
+.footer-content button {
+    width: 100%;
+    background-color: #FF7A8A;
+    border:none;
+    padding: 5px;
+}
+
+.footer-content button:hover {
+    background-color: white;
+}
+
+.footer-content button a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-content ul {
+    list-style: none;
+    line-height: 30px;
+    padding-left: 0;
+    color: #E9DAC1;
+}
+
+.footer-content ul li a {
+    color: #F7ECDE;
+}
+
+.copyright {
+    padding: 20px;
+}
+
+.copyright p {
+    text-align: center;
+    color: #F7ECDE;
+}
+
+/* RESPONSIVE LAYOUT */
+
+@media (max-width: 800px) {
+
+    .menu {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        justify-content: center;
+        background: rgba(37, 29, 58, 0.9);
+        display: none;
+    }
+    
+    .menu ul {
+        width: 90%;
+        height: 50%;
+        margin-top: 150px;
+        display: inline-grid;
+    }
+
+    .menu ul li {
+        font-size: 2rem;
+    }
+
+    .close-menu {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 5px;
+    }
+    
+    .open-menu {
+        display:block;
+    }
+
+    .open-menu svg {
+        width: 30px;
+        fill: #F7ECDE;
+        cursor: pointer;
+    }
+
+    .open-menu svg:hover {
+        fill: #F76262;
+    }
+
+    .close-menu svg {
+        width: 30px;
+        fill: #F7ECDE;
+        cursor: pointer;
+    }
+
+    .close-menu svg:hover {
+        fill: #E04D01;
+    }
+
+
+    h3 {
+        font-size: 1.3rem;
+        margin: 0;
+    }
+
+    .partners p {
+        font-size: 0.8rem;
+    }
+
+    .container {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .left-container {
+        width: 100%;
+        margin:auto;
+        padding: 0;
+        margin-bottom: 100px;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    .right-container {
+        width: 100%;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+
+    .right-wrapper {
+        display: flex;
+        flex-direction: column;
+        flex: 30%;
+    }
+
+    .right-wrapper img{
+        width: 100%;
+        height: 100px;
+        object-fit: cover;
+    }
+
+    .ra-category ul li{
+        /* display: block; */
+        line-height: 35px;
+    }
+
+    .choice-container {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+
+    .choice-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .choice {
+        margin-bottom: 30px;
+    }
+
+    
+}
+
+@media (max-width: 1024px) {
+    nav {
+        width: 90%;
+    }
+
+    .right-container {
+        margin-top: 50px;   
+    }
+    
+    .right-wrapper {
+        display: block;
+        margin-bottom: 25px;
+        padding: 0;
+    }
+
+    .right-wrapper img {
+        width: 100%;
+        max-height: 100px;
+        object-fit: cover;
+    }
+
+    .choice {
+        margin-bottom: 30px;
+    }
+
+    .choice p {
+        max-height: 100px;
+        overflow: hidden;
+    }
+
+    .artist-list {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .artist-list::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@media (max-width: 1440px) {
+    nav {
+        width: 90%;
+    }
+
+    .top-banner {
+        width: 90%;
+        margin-top: 150px;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .choice-container {
+        width: 90%;
+    }
+
+    .choice {
+        margin-bottom: 30px;
+    }
+
+    .choice p {
+        max-height: 100px;
+        overflow: hidden;
+    }
+
+    .artist-container {
+        width: 90%;
+    }
+
+    .footer-container {
+        width: 90%;
+    }
+}
