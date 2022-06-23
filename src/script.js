@@ -8,9 +8,9 @@ closeMenu.addEventListener('click', hide);
 function show(){
     menu.style.transition = 'all 2s';
     menu.style.display = 'flex';
-    menu.style.top = '';
+    menu.style.top = '0';
 }
 
 function hide(){
-    menu.style.top = '-150%';
+    menu.style.top = '-100%';
 }
