@@ -7,14 +7,9 @@ html, body {
     margin: 0;
     font-family: "IBM Plex Sans", sans-serif;
     color: #323537;
-    background-color: #FAEDF0;
+    background-color: #F2F4F6;
 }
 
-p {
-    font-size: 1rem;
-    line-height: 1.6rem;
-    font-weight: 400;
-}
 
 h1, h2, h3, h4, h5, h6 {
     line-height: 2rem;
@@ -33,7 +28,7 @@ h2 {
     text-decoration: underline;
     text-underline-offset: 6px;
     text-decoration-thickness: 4px;
-    text-decoration-color: #FF7700;
+    text-decoration-color: #FF7A8A;
     line-height: 50px;
 }
 
@@ -44,22 +39,30 @@ h3 {
 
 }
 
-span {
+p {
     font-size: 1rem;
     line-height: 1.6rem;
     font-weight: 400;
 }
 
+
 a {
     text-decoration: none;
-    color: #323537;
+    color: #52437B;
 }
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* HEADER */
 
 header {
     width: 100%;
-    background-color: #251D3A;
+    background-color: #293462;
     top: 0;
     z-index: 100;
+    position: fixed;
 }
 
 nav {
@@ -70,11 +73,15 @@ nav {
     align-items: center;
 }
 
-.logo img{
+.logo img {
     width: 50px;
     height: 50px;
     padding: 5px;
-    background: none;
+    cursor: pointer;
+}
+
+.logo img:hover {
+    transform: rotate(-5deg);
 }
 
 .open-menu, .close-menu {
@@ -91,7 +98,7 @@ nav {
     margin: auto;
     display: inline-block;
     float: right;
-    padding: 0 10px;
+    padding: 5px 15px;
 }
 
 .menu ul li a {
@@ -104,27 +111,27 @@ nav {
     text-decoration: underline;
     text-underline-offset: 6px;
     text-decoration-thickness: 4px;
-    text-decoration-color: #FF7700;
-}
-
-.writing button {
-    background: #E04D01;
-    border:none;
-    padding: 10px;
+    text-decoration-color: #F76262;
 }
 
 .partners {
     width: 100%;
     text-align:center;
-    font-weight: bold;
-    background-color: #E04D01;
+    background-color: #F76262;
 }
 
 .partners p {
-    color: #2A2550;
+    color: #293462;
     margin: 0;
-    line-height: 2rem;
-    font-weight: bold;
+    line-height: 2.5rem;
+}
+
+.partners a {
+    color: #293462;
+}
+
+.partners a:hover {
+    color: #F2F4F6;
 }
 
 
@@ -134,7 +141,7 @@ nav {
     /* display: flex; */
     width: 1400px;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 150px;
 }
 
 .top-banner img {
@@ -183,9 +190,8 @@ main {
     display: inline-block;
 }
 
-.category ul li a:hover {
-    color: #FF7700;
-    
+.category ul li a {
+    color: #323537;
 }
 
 .article-content {
@@ -198,7 +204,6 @@ aside {
 
 .profile-container {
     text-align: center;
-    
 }
 
 .profile-container img {
@@ -210,6 +215,30 @@ aside {
 .profile-container h3 { 
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-media ul {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.social-media ul li {
+    display: inline-block;
+    
+}
+
+.social-media svg:hover {
+    fill: #FF7A8A;
 }
 
 .right-container {
@@ -229,7 +258,7 @@ aside {
 }
 
 
-/* EDITORIAL SECTION */
+/* EDITOR CHOICE  */
 
 .choice-container {
     max-width: 1400px;
@@ -247,6 +276,12 @@ aside {
 
 .choice {
     flex: 25%;
+    margin-bottom: 30px;
+}
+
+.choice p {
+    max-height: 100px;
+    overflow: hidden;
 }
 
 .choice img {
@@ -255,7 +290,7 @@ aside {
     object-fit: cover;
 }
 
-/* ARTIST SECTION */
+/* ARTIST */
 
 .artist-container {
     display: flex;
@@ -286,10 +321,6 @@ aside {
     width: 250px;
 }
 
-.artist:hover {
-    opacity: 0.5;
-}
-
 .artist-thumb {
     position: relative;
     width: 100%;
@@ -310,7 +341,7 @@ aside {
 footer {
     width: 100%;
     margin: auto;
-    background-color: #2A2550;
+    background-color: #52437B;
     color: #F7ECDE;
 }
 
@@ -332,27 +363,32 @@ footer {
 }
 
 .footer-content form {
-    width: 100% !important;
+    width: 100%;
     margin-top: 20px;
 }
 
 .footer-content input {
     margin-bottom: 10px;
-    height: 25px;
+    height: 30px;
+    font-size: 1rem;
     border:none;
-    width:100% !important;
-    
+    width:100%;    
 }
 
 .footer-content button {
     width: 100%;
-    background-color: #FF7700;
+    background-color: #FF7A8A;
     border:none;
     padding: 5px;
 }
 
+.footer-content button:hover {
+    background-color: white;
+}
+
 .footer-content button a {
     text-decoration: none;
+    font-weight: bold;
 }
 
 .footer-content ul {
@@ -362,8 +398,7 @@ footer {
     color: #E9DAC1;
 }
 
-.footer-content ul li a{
-    text-decoration: none;
+.footer-content ul li a {
     color: #F7ECDE;
 }
 
@@ -376,7 +411,7 @@ footer {
     color: #F7ECDE;
 }
 
-/* Responsive Layout */
+/* RESPONSIVE LAYOUT */
 
 @media (max-width: 800px) {
 
@@ -421,7 +456,7 @@ footer {
     }
 
     .open-menu svg:hover {
-        fill: #E04D01;
+        fill: #F76262;
     }
 
     .close-menu svg {
@@ -434,13 +469,14 @@ footer {
         fill: #E04D01;
     }
 
-    .top-banner {
-        margin-top: 50px;
-    }
 
     h3 {
         font-size: 1.3rem;
         margin: 0;
+    }
+
+    .partners p {
+        font-size: 0.8rem;
     }
 
     .container {
@@ -497,14 +533,7 @@ footer {
         margin-bottom: 30px;
     }
 
-    .artist-container {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-    }
-
-    .artist-container::-webkit-scrollbar {
-        display: none;
-    }
+    
 }
 
 @media (max-width: 1024px) {
@@ -527,6 +556,24 @@ footer {
         max-height: 100px;
         object-fit: cover;
     }
+
+    .choice {
+        margin-bottom: 30px;
+    }
+
+    .choice p {
+        max-height: 100px;
+        overflow: hidden;
+    }
+
+    .artist-list {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .artist-list::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 @media (max-width: 1440px) {
@@ -536,7 +583,7 @@ footer {
 
     .top-banner {
         width: 90%;
-        margin-top: 50px;
+        margin-top: 150px;
     }
 
     .container {
@@ -545,6 +592,15 @@ footer {
 
     .choice-container {
         width: 90%;
+    }
+
+    .choice {
+        margin-bottom: 30px;
+    }
+
+    .choice p {
+        max-height: 100px;
+        overflow: hidden;
     }
 
     .artist-container {
