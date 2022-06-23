@@ -12,5 +12,5 @@ function show(){
 }
 
 function hide(){
-    menu.style.top = '-100%';
+    menu.style.top = '-150%';
 }
