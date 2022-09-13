@@ -36,12 +36,17 @@ button {
     margin: 50px 0;
 }
 
+.head-container > h3 {
+    font-weight: 700;
+}
+
 .head-container > img {
     width: 250px;
     height: 250px;
     border-radius: 100%;
     margin-bottom: 20px;
     filter: saturate(2);
+    transform: rotate(180deg);
 }
 
 .body-container {
